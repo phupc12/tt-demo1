@@ -1,16 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Tỏ Tình</title>
-	<link rel="stylesheet" href="tt.css">
 </head>
+
 <body>
+	<script>
+		function showMessage() {
+			const message = document.getElementById('message');
+			message.innerHTML = 'Tôi yêu My rất nhiều!';
+			message.style.display = 'block';
+		}
+
+	</script>
 	<h1>Tôi muốn nói rằng...</h1>
-	<p>My à, tôi đã nhớ về em từ rất lâu rồi. Những cảm xúc trong lòng tôi không thể tả nổi được bằng lời. Vì vậy, tôi quyết định tạo ra trang web này để gửi tới em thông điệp tình yêu của tôi. Em có muốn biết nó là gì không?</p>
+	<p>My à, tôi đã nhớ về em từ rất lâu rồi. Những cảm xúc trong lòng tôi không thể tả nổi được bằng lời. Vì vậy, tôi
+		quyết định tạo ra trang web này để gửi tới em thông điệp tình yêu của tôi. Em có muốn biết nó là gì không?</p>
 	<button onclick="showMessage()">Bấm vào đây</button>
 	<p id="message"></p>
-	
-	<script src="tt.js"></script>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #f8f8f8;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		h1,
+		p {
+			text-align: center;
+			margin-top: 50px;
+			color: #333;
+		}
+
+		button {
+			display: block;
+			margin: 30px auto;
+			padding: 20px;
+			background-color: #ff69b4;
+			border: none;
+			border-radius: 5px;
+			color: #fff;
+			font-size: 22px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			cursor: pointer;
+			transition: background-color 0.3s ease-in-out;
+		}
+
+		button:hover {
+			background-color: #ff5c9a;
+		}
+
+		#message {
+			font-size: 36px;
+			font-weight: bold;
+			text-align: center;
+			color: #ff69b4;
+			margin-top: 50px;
+			display: none;
+			animation-name: slideInDown;
+			animation-duration: 1s;
+		}
+
+		@keyframes slideInDown {
+			from {
+				transform: translateY(-100%);
+			}
+
+			to {
+				transform: translateY(0);
+			}
+		}
+	</style>
 </body>
+
 </html>
